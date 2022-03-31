@@ -43,13 +43,15 @@ if(file_exists($user1) && file_exists($user2) && (time() - filemtime($user1) < $
         <div class="col s6 m6" id="player">
             <?php foreach ($usergames as $gameslistuser => $value) { ?>
             <div class="card" style="background:#c53232;">
-                <div class="card-image waves-effect waves-light">
+                <div class="card-content" style="display: inline-block;">
+                    <div class="card-image waves-effect waves-light">
                     <?php
                     if(!empty($value['img_icon_url'])) {
                     ?>
                     <img class="activator"
-                        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/<?php echo $value['appid'].'/'.$value['img_icon_url'];?>.jpg" width="100px" height="100px">
+                        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/<?php echo $value['appid'].'/'.$value['img_icon_url'];?>.jpg" width="50px" height="50px">
                         <?}?>
+                    </div>
                 </div>
                 <div class="card-content" style="display: inline-block;">
                     <span class="card-title activator grey-text text-darken-4"><?php echo $value['name'];?></span>
@@ -65,13 +67,15 @@ if(file_exists($user1) && file_exists($user2) && (time() - filemtime($user1) < $
         <div class="col s6 m6" id="player2">
             <?php foreach ($usergames2 as $games2) { ?>
             <div class="card" style="background:#c53232;">
-                <div class="card-image waves-effect waves-light">
-                <?php
-                    if(!empty($games2['img_icon_url'])) {
-                    ?>
-                    <img class="activator"
-                        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/<?php echo $games2['appid'].'/'.$games2['img_icon_url'];?>.jpg" width="100px" height="100px">
-                        <?}?>
+                <div class="card-content" style="display: inline-block;">
+                    <div class="card-image waves-effect waves-light">
+                        <?php
+                        if(!empty($value['img_icon_url'])) {
+                        ?>
+                        <img class="activator"
+                            src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/<?php echo $games2['appid'].'/'.$games2['img_icon_url'];?>.jpg" width="50px" height="50px">
+                            <?}?>
+                    </div>
                 </div>
                 <div class="card-content" style="display: inline-block;">
                     <span class="card-title activator grey-text text-darken-4"><?php echo $games2['name'];?></span>
