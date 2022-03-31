@@ -70,7 +70,7 @@ if(file_exists($user1) && file_exists($user2) && (time() - filemtime($user1) < $
                 <div class="card-content" style="display: inline-block;">
                     <div class="card-image waves-effect waves-light">
                         <?php
-                        if(!empty($value['img_icon_url'])) {
+                        if(!empty($games2['img_icon_url'])) {
                         ?>
                         <img class="activator"
                             src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/<?php echo $games2['appid'].'/'.$games2['img_icon_url'];?>.jpg" width="50px" height="50px">
